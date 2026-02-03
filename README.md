@@ -1,41 +1,32 @@
-Love it — here’s a **clean, professional README** you can paste directly into GitHub.
-It clearly highlights that your project is built with **Streamlit**.
-
----
-
-```markdown
 # Heart Disease Risk Prediction System
-
-A machine learning powered web application that predicts the risk of heart disease based on patient medical attributes.
-
-Built using **Streamlit** for the frontend and **Scikit-learn** for the machine learning model.
-
----
 
 ## Built With Streamlit
 
-This project features an interactive medical-style interface developed using **Streamlit**, allowing users to input patient data and instantly receive a heart disease risk prediction.
+This web application is built using **Streamlit** to provide an interactive and user-friendly medical risk assessment interface.  
+Users can enter patient details and instantly receive a heart disease risk prediction powered by a Machine Learning model.
 
 ---
 
 ## Features
 
-- Interactive web interface built with Streamlit  
-- Patient-friendly input form with medical labels  
-- Risk classification (Low / Moderate / High / Very High)  
-- Probability visualization using charts and progress bars  
-- Color-coded risk indicators  
-- Summary table of entered patient values  
+- Interactive medical input form  
+- Real-time heart disease risk prediction  
+- Risk level classification (Low, Moderate, High, Very High)  
+- Probability visualization with progress bar and charts  
+- Clean and professional medical-style interface  
+- Model confidence display  
 - Educational medical disclaimer  
+- Feature preprocessing using StandardScaler and SelectKBest  
 
 ---
 
-## Machine Learning Details
+## Tech Stack
 
-- Model: Random Forest Classifier  
-- Preprocessing: StandardScaler  
-- Feature Selection: SelectKBest  
-- Dataset: UCI Heart Disease Dataset  
+**Frontend:** Streamlit  
+**Backend / ML:** Python, scikit-learn  
+**Model:** RandomForestClassifier  
+**Data Processing:** pandas, numpy  
+**Visualization:** matplotlib, seaborn  
 
 ---
 
@@ -46,11 +37,10 @@ This project features an interactive medical-style interface developed using **S
 heart-disease-prediction/
 │
 ├── app.py              # Streamlit web application
-├── train_model.py      # Model training script
-├── heart_model.pkl     # Saved trained model
-├── scaler.pkl          # Saved scaler
-├── selector.pkl        # Saved feature selector
-├── heart.csv           # Dataset (optional if training locally)
+├── train_model.py      # Script to train and save the ML model
+├── heart_model.pkl     # Trained model file (generated after training)
+├── scaler.pkl          # Feature scaler (generated after training)
+├── selector.pkl        # Feature selector (generated after training)
 ├── requirements.txt
 └── README.md
 
@@ -58,7 +48,7 @@ heart-disease-prediction/
 
 ---
 
-## Installation & Setup
+## Installation and Setup
 
 ### 1. Clone the Repository
 
@@ -70,10 +60,13 @@ cd heart-disease-prediction
 ### 2. Create Virtual Environment (Recommended)
 
 ```bash
+# Windows
 python -m venv venv
-venv\Scripts\activate   # Windows
-# or
-source venv/bin/activate  # Mac/Linux
+venv\Scripts\activate
+
+# Mac / Linux
+python3 -m venv venv
+source venv/bin/activate
 ```
 
 ### 3. Install Dependencies
@@ -84,9 +77,9 @@ pip install -r requirements.txt
 
 ---
 
-## Running the Project
+## Run the Application
 
-### Step 1 — Train the Model
+### Step 1: Train the Model
 
 ```bash
 python train_model.py
@@ -94,17 +87,17 @@ python train_model.py
 
 This generates:
 
-* heart_model.pkl
-* scaler.pkl
-* selector.pkl
+* `heart_model.pkl`
+* `scaler.pkl`
+* `selector.pkl`
 
-### Step 2 — Launch Streamlit App
+### Step 2: Launch Streamlit App
 
 ```bash
 streamlit run app.py
 ```
 
-Open your browser at:
+Open your browser and go to:
 
 ```
 http://localhost:8501
@@ -115,31 +108,38 @@ http://localhost:8501
 ## How to Use
 
 1. Enter patient information in the sidebar
-2. Click **Calculate Risk Level**
-3. View:
-
-   * Risk category
-   * Prediction probability
-   * Confidence chart
-   * Summary of entered data
+2. Click **"Calculate Risk Level"**
+3. View the predicted heart disease risk and probability
 
 ---
 
-## Disclaimer
+## Model Information
 
-This application is created for **educational and demonstration purposes only**.
+The model is trained using a Heart Disease dataset and uses:
 
-It is **not** a medical diagnostic tool. Always consult a qualified healthcare professional for medical advice.
+* Feature scaling for improved performance
+* Feature selection to remove noise
+* Random Forest ensemble learning for higher accuracy
+
+---
+
+## Important Disclaimer
+
+This application is for **educational and demonstration purposes only**.
+
+It is **not** a medical device and must **not** be used for real medical diagnosis or treatment decisions.
+
+Always consult a qualified healthcare professional for medical advice.
 
 ---
 
 ## Future Improvements
 
-* Add explainable AI (SHAP/LIME)
-* Export patient risk report as PDF
-* Deploy on Streamlit Cloud
-* Add user authentication
-* Support multiple ML model comparisons
+* Add Explainable AI (SHAP values)
+* Downloadable medical report
+* Model comparison dashboard
+* Cloud deployment
+* User authentication
 
 ---
 
@@ -147,17 +147,9 @@ It is **not** a medical diagnostic tool. Always consult a qualified healthcare p
 
 This project is open-source and available under the MIT License.
 
----
-
-**Developed using Streamlit and Machine Learning**
-
 ```
 
 ---
 
-If you want, I can now give you:
-
-- A ready-made **requirements.txt**
-- A short **GitHub repo description line**
-- Steps to deploy on **Streamlit Cloud**
+If you want, next I can give you a **perfect `requirements.txt`** file for this project.
 ```
